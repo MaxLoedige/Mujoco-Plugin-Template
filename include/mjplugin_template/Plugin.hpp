@@ -63,12 +63,10 @@ struct MJPlugin {
 
     virtual void registerAttributes(){
         info.name = "mujoco.plugin.template";
-        plugin.capabilityflags |= mjPLUGIN_SENSOR;
+        info.capabilityflags |= mjPLUGIN_SENSOR;
         std::vector<const char*> attributes = {};
-        plugin.nattribute = attributes.size();
-        plugin.attributes = attributes.data();
-
-
+        info.nattribute = attributes.size();
+        info.attributes = attributes.data();
     }
 
     virtual void nstate(const mjModel* m, int instance){return 0;}
