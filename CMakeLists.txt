@@ -13,7 +13,7 @@ FetchContent_Declare(
 # Download and make available the MuJoCo dependency
 FetchContent_MakeAvailable(mujoco)
 
-add_library(${PROJECT_NAME} STATIC Plugin.hpp)
+add_library(${PROJECT_NAME} STATIC include/mjplugin_template/Plugin.hpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
     ${mujoco_SOURCE_DIR}
